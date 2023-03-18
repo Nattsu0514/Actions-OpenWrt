@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Build XDR6088 
+name: Build XDR6088 Router (immortalwrtARM)
 
 on:
   repository_dispatch:
@@ -20,12 +20,12 @@ on:
         default: 'false'
 
 env:
-  REPO_URL: https://github.com/coolsnowwolf/lede.git
-  REPO_BRANCH: master
+  REPO_URL: https://github.com/padavanonly/immortalwrtARM
+  REPO_BRANCH: mt7986-dual-2.5G
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: router_lean_master.config
-  DIY_P1_SH: diy-part1.sh
-  DIY_P2_SH: diy-part2.sh
+  CONFIG_FILE: seeds/xdr6088.config
+  DIY_P1_SH: script/router-xdr6088/diy-part1.sh
+  DIY_P2_SH: script/router-address.sh
   UPLOAD_BIN_DIR: true
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
